@@ -10,9 +10,21 @@ class FriendList extends React.Component {
       super(props);
       
    };
+   componentDidMount() {
+   		console.log('cdm called');
+   		setInterval( () => this.tick(), 1000)
 
+   }
+   componentWillUnmount() {
+   		console.log('unmount called');
+   }
+   tick = () => {
+       console.log('tick called');
+
+   }
    render() {
-   	  console.log(this.props.friendsInfo.data);
+
+   	  console.log(this.props.friendsInfo.data, this.props);
         return (
        		<div>
        			<table>

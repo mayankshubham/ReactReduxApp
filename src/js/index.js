@@ -12,7 +12,7 @@ ReactDOM.render(
 	<Provider store={store}>
 		<Router>
 			<div>
-				<Route exact path="/" component={FriendList}/>
+				<Route exact path="/" render={() => (<FriendList text="Hi"/>)} />
 				<Route path="/edit/:friendId" component={EditFriend}/>
 			</div>
 		</Router>
